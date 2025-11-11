@@ -23,7 +23,7 @@ uploaded_file = st.file_uploader("📤 Upload an X-ray Image", type=["jpg", "jpe
 
 if uploaded_file is not None:
     # Display uploaded image
-    st.image(uploaded_file, caption="Uploaded Image", use_container_width=True)
+    st.image(uploaded_file, caption="Uploaded Image", width='stretch')
 
     # Save uploaded image temporarily
     with tempfile.NamedTemporaryFile(delete=False, suffix=".jpg") as tmp_file:
@@ -36,7 +36,7 @@ if uploaded_file is not None:
         result_image = results[0].plot()  # returns numpy array with boxes
 
     # --- Display Result ---
-    st.image(result_image, caption="🩻 Detected Fractures", use_container_width=True)
+    st.image(result_image, caption="🩻 Detected Fractures", width='stretch')
 
     # --- Option to Download ---
     result_image_pil = Image.fromarray(result_image)
