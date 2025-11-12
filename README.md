@@ -29,7 +29,7 @@ A web application that detects hand fractures from X-ray images using a YOLOv8 o
 
 ---
 
-## Installation
+## Installation Method
 
 1. **Clone the repository**
 
