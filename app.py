@@ -14,7 +14,6 @@ st.write("Upload an X-ray image to detect fractures using your trained YOLO mode
 def load_model():
     model_path = "best.pt"  # Make sure your model file is in the same folder
     model = YOLO(model_path)
-    model.names = {0: "fracture"}
     return model
 
 model = load_model()
